@@ -95,7 +95,7 @@ const compute = () => {
             break;
     }
 
-    if(Math.abs(result) == Infinity)
+    if(Math.abs(result) == Infinity || isNaN(result))
         result = 0;
     
     currentNumber = result.toString();
