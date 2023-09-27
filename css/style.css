@@ -1,0 +1,219 @@
+:root{
+    --clr-bg-body:  hsl(222, 26%, 31%);
+    --clr-bg-switch: hsl(223, 31%, 20%);
+    --clr-bg-screen-keypad: hsl(224, 36%, 15%);
+    
+    --clr-bg-key-operation: hsl(30, 25%, 89%);
+    --clr-shadow-key-operation: hsl(28, 16%, 65%);
+    --clr-bg-key-action: hsl(225, 21%, 49%);
+    --clr-shadow-key-action:  hsl(224, 28%, 35%);
+    --clr-bg-key-equals: hsl(6, 63%, 50%);
+    --clr-shadow-key-equals: hsl(6, 70%, 34%);
+
+    --clr-text-top: hsl(0, 0%, 100%);
+    --clr-text-key-action: hsl(0, 0%, 100%);
+    --clr-text-key-operation:  hsl(221, 14%, 31%);
+    --clr-text-key-equals:  hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100%;
+    margin: 0;
+    padding: 1.5em;
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--clr-bg-body);
+}
+
+.theme-1{
+    --clr-bg-body:  hsl(222, 26%, 31%);
+    --clr-bg-switch: hsl(223, 31%, 20%);
+    --clr-bg-screen-keypad: hsl(224, 36%, 15%);
+    
+    --clr-bg-key-operation: hsl(30, 25%, 89%);
+    --clr-shadow-key-operation: hsl(28, 16%, 65%);
+    --clr-bg-key-action: hsl(225, 21%, 49%);
+    --clr-shadow-key-action:  hsl(224, 28%, 35%);
+    --clr-bg-key-equals: hsl(6, 63%, 50%);
+    --clr-shadow-key-equals: hsl(6, 70%, 34%);
+
+    --clr-text-top: hsl(0, 0%, 100%);
+    --clr-text-key-action: hsl(0, 0%, 100%);
+    --clr-text-key-operation:  hsl(221, 14%, 31%);
+    --clr-text-key-equals:  hsl(0, 0%, 100%);
+}
+
+.theme-2{
+    --clr-bg-body:  hsl(0, 0%, 90%);
+    --clr-bg-switch: hsl(0, 5%, 81%);
+    --clr-bg-screen-keypad: hsl(0, 0%, 93%);
+    
+    --clr-bg-key-operation: hsl(45, 7%, 89%);
+    --clr-shadow-key-operation:  hsl(35, 11%, 61%);
+    --clr-bg-key-action: hsl(185, 42%, 37%);
+    --clr-shadow-key-action:  hsl(185, 58%, 25%);
+    --clr-bg-key-equals: hsl(25, 98%, 40%);
+    --clr-shadow-key-equals: hsl(25, 99%, 27%);
+
+    --clr-text-top: hsl(60, 10%, 19%);
+    --clr-text-key-action: hsl(0, 0%, 100%);
+    --clr-text-key-operation:  hsl(60, 10%, 19%);
+    --clr-text-key-equals:  hsl(0, 0%, 100%);
+}
+
+.theme-3{
+    --clr-bg-body:  hsl(268, 75%, 9%);
+    --clr-bg-switch: hsl(268, 71%, 12%);
+    --clr-bg-screen-keypad: hsl(268, 71%, 12%);
+    
+    --clr-bg-key-operation: hsl(268, 47%, 21%);
+    --clr-shadow-key-operation:  hsl(290, 70%, 36%);
+    --clr-bg-key-action: hsl(281, 89%, 26%);
+    --clr-shadow-key-action:  hsl(285, 91%, 52%);
+    --clr-bg-key-equals: hsl(176, 100%, 44%);
+    --clr-shadow-key-equals: hsl(177, 92%, 70%);
+
+    --clr-text-top: hsl(52, 100%, 62%);
+    --clr-text-key-action: hsl(0, 0%, 100%);
+    --clr-text-key-operation:  hsl(52, 100%, 62%);
+    --clr-text-key-equals:  hsl(198, 20%, 13%);
+}
+
+main{
+    max-width: 540px;
+}
+
+.container-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--clr-text-top);
+}
+
+.calculator__screen{
+    color: var(--clr-text-top);
+}
+
+.theme{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.theme__options{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.theme__switch input{
+    appearance: none;
+    width: 70px;
+    padding: 1em 0.5em;
+    height: 15px;
+    border-radius: 1em;
+    background-color: var(--clr-bg-switch);
+    cursor: pointer;
+}
+
+.theme__switch input::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--clr-bg-key-equals);
+}
+
+.theme__switch input::-moz-range-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--clr-bg-key-equals);
+}
+
+.calculator{
+    font-size: 2rem;
+}
+
+.calculator__screen{
+    margin-bottom: 20px;
+    padding: 0.5em;
+    font-size: 2.5rem;
+    text-align: right;
+    border-radius: 12px;
+    background-color: var(--clr-bg-screen-keypad);
+    overflow: auto;
+}
+
+.calculator__keys{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 100px));
+    gap: 13px;
+    padding: 1em;
+    border-radius: 12px;
+    background-color: var(--clr-bg-switch);
+}
+
+.key:nth-last-child(-n + 2){
+    grid-column: span 2;
+}
+
+.key{
+    padding: 0.4em;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 4px 0 0 var(--clr-shadow-key-operation);
+
+    cursor: pointer;
+}
+
+.key--number, .key--operation{
+    color: var(--clr-text-key-operation);
+    background-color: var(--clr-bg-key-operation);
+}
+
+.key:is(:hover, :focus){
+    filter: brightness(1.5);
+}
+
+.key--change{
+    font-size: 1.25rem;
+    color: var(--clr-text-key-action);
+    box-shadow: 0 4px 0 0 var(--clr-shadow-key-action);
+    background-color: var(--clr-bg-key-action);
+}
+
+.key--equals{
+    color: var(--clr-text-key-equals);
+    background-color: var(--clr-bg-key-equals);
+    box-shadow: 0 4px 0 0 var(--clr-shadow-key-equals);
+}
+
+@media screen and (min-width: 450px) {
+    .calculator__keys{
+        gap: 25px;
+    }
+
+    .key--change{
+        font-size: 1.75rem;
+    }    
+}
